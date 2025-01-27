@@ -1,11 +1,11 @@
 import React from 'react';
 
-import NorthEastIcon from '@mui/icons-material/NorthEast';
+import Icon from './Icon';
 
 export interface LinkProps {
     text?: string;
     path?: string;
-    newTabIcon?: boolean;
+    newTab?: boolean;
 
     onClick?: () => void;
 }
@@ -13,13 +13,13 @@ export interface LinkProps {
 export default function Link({
     text = 'Link!',
     path,
-    newTabIcon = false 
+    newTab = false 
 }: LinkProps) {
 
     return (
-        <a href={path} className='flex items-center space-x-1'>
+        <a href={path} className='flex items-center space-x-1 h-12 p-2'>
             <span className='self-center font-semibold whitespace-nowrap'>{text}</span>
-            {newTabIcon && <NorthEastIcon sx={{ fontSize: 24, '& path': { strokeWidth: 0, stroke: 'black' } }}/>}
+            {newTab && <Icon icon="MdNorthEast" />}
         </a>
     );
 }

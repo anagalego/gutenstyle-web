@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from 'tailwindcss/colors';
 
 export default {
   content: [
@@ -12,6 +13,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        keyboardCtrl: `0px 4px 0px ${colors.stone[300]}`
+      }
     },
   },
   plugins: [],

@@ -1,12 +1,18 @@
 import React from 'react';
+import { FaNpm, FaGithub, FaFigma } from "react-icons/fa";
 
+import Input from './Input';
+import Logo from './Logo';
+import TreeView from './TreeView';
 import Link from './Link';
+
+import { navbarDataWithIds } from '@/data/navbar-data';
 
 export interface NavbarProps {
     brand?: string;
     hyperlink?: string;
 
-    onClick?: () => void;
+    onClick?: () => void;   
 }
 
 export default function Navbar({
@@ -14,72 +20,36 @@ export default function Navbar({
 }: NavbarProps) {
 
   return (
-    <nav className='w-80 h-full p-12 flex flex-col content-between p-8'>
-        <div className='space-x-4 text-2xl'>
-            <Link
-            text='Gutenstyle'
-            path='#'
-            />
-            <input className="bg-stone-100 w-full" type="text" placeholder="Search"/>
+    <nav className='w-80 h-full sticky flex p-8 flex-col space-y-8 text-xl'>
+        <div>
+            <Logo />
+            <Input />
         </div>
-        <div className='space-x-8 text-xl'>
-
-        </div>
-        <ul className='space-y-2 text-lg'>
-            <li>
+        <TreeView treeData={navbarDataWithIds}/>
+        <ul>
+            <li className='flex space-x-1 items-center'>
+                <FaNpm />
                 <Link
-                text='Get started'
-                path='https://github.com/anagalego'
+                text='npm'
+                path='https://www.npmjs.com/package/gutenstyle'
+                newTab
                 />
             </li>
-            <li>
+            <li className='flex space-x-1 items-center'>
+                <FaGithub />
                 <Link
-                text='New in'
-                path='https://github.com/anagalego'
+                text='github'
+                path='https://github.com/anagalego/gutenstyle'
+                newTab
                 />
             </li>
-            <li>
-                <ul>
-                    <span className="text-lg">About</span>
-                    <Link
-                    text='Purpose'
-                    path='https://github.com/anagalego'
-                    />
-                    <Link
-                    text='Showcase'
-                    path='https://github.com/anagalego'
-                    />
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <span className="text-lg">Design</span>
-                    <Link
-                    text='Tokens'
-                    path='https://github.com/anagalego'
-                    />
-                    <Link
-                    text='Foundations'
-                    path='https://github.com/anagalego'
-                    />
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <span className="text-lg">Components</span>
-                    <Link
-                    text='Overview'
-                    path='https://github.com/anagalego'
-                    />
-                    <Link
-                    text='Accordion'
-                    path='https://github.com/anagalego'
-                    />
-                     <Link
-                    text='Button'
-                    path='https://github.com/anagalego'
-                    />
-                </ul>
+            <li className='flex space-x-1 items-center'>
+                <FaFigma />
+                <Link
+                text='figma'
+                path='https://www.figma.com/'
+                newTab
+                />
             </li>
         </ul>
     </nav>
