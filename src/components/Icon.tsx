@@ -16,7 +16,7 @@ export interface IconProps {
 export default function Icon({
     icon = "MdSearch",
     collection = IconCollection.MaterialIcons,
-    size = 24,
+    size = 24
 }: IconProps) {
     const iconCollections = {
         [IconCollection.MaterialIcons]: MaterialIcons,

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alegreya, Karla } from "next/font/google";
+import { Alegreya, Karla, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "../components/Navbar"
@@ -8,14 +8,21 @@ export const alegreya_regular = Alegreya({
   weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 export const karla_regular = Karla({
   weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
+})
+
+export const roboto_mono = Roboto_Mono({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -38,8 +45,8 @@ export default function RootLayout({
       >
         <div className="flex justify-center">
           <div className="w-full max-w-screen-2xl h-screen px-4 flex">
-            <Navbar brand="Gutenstyle" />
-            <main className="w-full h-full py-8 overflow-scroll">{children}</main>
+            <Navbar />
+            <main className="w-full h-screen py-8 overflow-scroll no-scrollbar">{children}</main>
           </div>
         </div>
       </body>

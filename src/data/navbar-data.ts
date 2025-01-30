@@ -1,6 +1,6 @@
 import { TreeNode } from "@/types/TreeNode";
 
-export const navbarData = [
+const navbarData = [
     {
         name: "Get started"
     },

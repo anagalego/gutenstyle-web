@@ -1,10 +1,9 @@
 import Heading, { FontType } from '@/components/Heading';
 import Index from '@/components/Index'
 import Paragraph from '@/components/Paragraph';
-import JohannesGutenberg from '../../public/johannes-gutenberg.jpg';
 
 const mockData = {
-  title: "Gutenstyle",
+  title: "Foundations",
   topics: [
     "Color",
     "Typography",
@@ -14,13 +13,10 @@ const mockData = {
   ]
 }
 
-export default function Home() {
+export default function DesignFoundationsPage() {
   return (<>
     <div className='w-full h-full p-2 bg-white rounded-t-[20px]'>
-      <div
-        className='w-full h-80 bg-cover bg-center text-black rounded-[16px] px-8 py-6 flex items-end'
-        style={{ backgroundImage: `url(${JohannesGutenberg.src})` }}
-      >
+      <div className='w-full h-80 bg-teal-950 text-white rounded-[16px] px-8 py-6 flex items-end'>
         <Heading
           text={mockData.title}
           font={FontType.serif}
@@ -28,6 +24,10 @@ export default function Home() {
       </div>
       <div className='grid grid-cols-[1fr_320px]'>
         <section className='p-8 text-lg'>
+          <Heading
+            text="Color"
+            size='6xl'
+          />
           <Paragraph />
         </section>
         <Index topics={mockData.topics}/>

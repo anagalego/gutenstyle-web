@@ -31,7 +31,7 @@ export default function Button({
 
     const buttonClass = `
         h-12 px-4 flex items-center justify-center gap-2 rounded
-        ${mode === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}
+        ${mode === 'dark' ? 'bg-gray-900 text-white' : ''}
         ${appearance === 'primary' ? 'bg-blue-500 text-white' : ''}
         ${appearance === 'secondary' ? 'bg-gray-500 text-white' : ''}
         ${appearance === 'danger' ? 'bg-red-500 text-white' : ''}

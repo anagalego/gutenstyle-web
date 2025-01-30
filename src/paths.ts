@@ -25,7 +25,7 @@ const paths = {
         return `/design/foundations`;
     },
     componentsOverview() {
-        return `/components/overview`;
+        return `/components`;
     },
     componentsComponent(componentSlug: string) {
         return `/components/${componentSlug}`;

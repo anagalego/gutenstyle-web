@@ -15,10 +15,10 @@ export default function Index({
     ]
 }: IndexProps) {
     return (
-        <ul className='p-8 space-y-2 text-lg'>
+        <ul className='h-screen sticky -top-8 p-8 pt-16 space-y-2 text-lg'>
             {topics.map((topic) => (
-                // eslint-disable-next-line react/jsx-key
-                <li>
+            // eslint-disable-next-line react/jsx-key
+            <li>
                 <Link
                 key={topic}
                 text={topic}
@@ -29,7 +29,3 @@ export default function Index({
         </ul>
     )
 }
-
-
-
-
